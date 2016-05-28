@@ -9,7 +9,7 @@ var first = true;
 var activeKey=[];
 var current;
 var lastKey;
-var k48 = ["0"," "];
+var k48 = [" ","0"];
 var k49 = [".",",","!", "1"];
 var k50 = ["a","b","c", "2"];
 var k51 = ["d","e","f", "3"];
