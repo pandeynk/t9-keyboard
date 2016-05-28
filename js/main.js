@@ -2,7 +2,7 @@
 var input = document.getElementById("input");
 var timer;
 var pause = 0;
-var difTolerance = 700;
+var difTolerance = 500;
 var startTime;
 var endTime;
 var first = true;
@@ -21,8 +21,9 @@ var k56 = ["t","u","v", "8"];
 var k57 = ["w","x","y","z", "9"];
 var k58= ["*"];
 var k59 = ["#"];
+var text=[];
 function setWord(){
-    input.innerHTML = input.innerHTML + activeKey[current];
+    lastKey=null;
     current = 0;
     first=true;
 }
@@ -34,19 +35,10 @@ function checkPause(){
     }
 }
 function handleClick(e){
-    console.log("HEJ", e);
-
     if ($(e).prop("id") != lastKey) {
         current = 0;
         first = true;
     }
-    
-    lastKey = $(e).prop("id");
-    clearInterval(timer);
-    startTime = new Date().getTime();
-    pause = 0;
-    timer = setInterval(checkPause, 5);
-
     
     if ($(e).prop("id") === "0") {
         // 0
@@ -113,4 +105,19 @@ function handleClick(e){
         current = 0;
         first = false;
     }
+
+    clearInterval(timer);
+    startTime = new Date().getTime();
+    pause = 0;
+    timer = setInterval(checkPause, 5);
+
+    if ($(e).prop("id") != lastKey) {
+        text.push(activeKey[current]);
+    }else{
+        text.pop();
+        text.push(activeKey[current]);
+    }
+    $("#input").val(text.join(""));
+
+    lastKey = $(e).prop("id");
 }

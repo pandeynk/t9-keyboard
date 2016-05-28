@@ -11,7 +11,6 @@
 
         <link rel="stylesheet" href="css/main.css">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <style type="text/css">
           body{
             margin-top:50px;
@@ -30,7 +29,7 @@
         </div>
         <div class="col-md-4">
           <div class="form-group">
-            <textarea class="form-control well" id="input"></textarea>
+            <textarea class="form-control well" id="input" readonly="true"></textarea>
           </div>
           <div class="form-group">
             <div class="row">
@@ -100,8 +99,9 @@
         <div class="col-md-4">
       </div>
 
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    </div> <!-- /container -->        
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
 
