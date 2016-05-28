@@ -2,7 +2,7 @@
 var input = document.getElementById("input");
 var timer;
 var pause = 0;
-var difTolerance = 500;
+var difTolerance = 700;
 var startTime;
 var endTime;
 var first = true;
