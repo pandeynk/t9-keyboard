@@ -29,7 +29,7 @@
         </div>
         <div class="col-md-4">
           <div class="form-group">
-            <textarea class="form-control well" id="input"></textarea>
+            <textarea class="form-control well" id="input" readonly="true"></textarea>
           </div>
           <div class="form-group">
             <div class="row">
